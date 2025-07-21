@@ -32,7 +32,7 @@ export default function ContactSection() {
             <ContactInfo 
               icon={<Mail className="h-5 w-5 text-maroon-600 dark:text-gold-400" />}
               title="Email"
-              details={["j_prem@cb.amrita.edu"]}
+              details={["j_prem@cb.amrita.edu, s_sundaresan@cb.amrita.edu"]}
             />
             <ContactInfo 
               icon={<Phone className="h-5 w-5 text-maroon-600 dark:text-gold-400" />}

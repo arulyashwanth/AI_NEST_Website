@@ -28,7 +28,7 @@ export default function HeroSection() {
             Fostering Innovation through Academia-Industry Collaboration
           </p>
           <p className="text-lg text-gray-200 mb-12 max-w-2xl mx-auto">
-    Welcome to AI in Network Enterprise Systems and Theory (AI NEST) – a visionary research lab at <strong>Amrita Vishwa Vidyapeetham, Coimbatore</strong>,
+    Welcome to AI in Network Enterprise Systems and Theory (AI NEST) – a visionary research lab at <strong>School of AI, Amrita Vishwa Vidyapeetham, Coimbatore</strong>,
     where academic brilliance meets industrial ingenuity.
     Our mission is to catalyze innovation by building a vibrant ecosystem where
     students, researchers, and industry leaders work together on impactful projects.
