@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --maroon-50: #f9e9e9;
+  --maroon-100: #f2d4d4;
+  --maroon-200: #e6a9a9;
+  --maroon-300: #d97e7e;
+  --maroon-400: #cd5353;
+  --maroon-500: #c12828;
+  --maroon-600: #a41e1e;
+  --maroon-700: #871919;
+  --maroon-800: #6a1313;
+  --maroon-900: #4d0e0e;
+  
+  --gold-50: #fefaed;
+  --gold-100: #fff6d6;
+  --gold-200: #ffecac;
+  --gold-300: #ffe083;
+  --gold-400: #ffd359;
+  --gold-500: #ffc130;
+  --gold-600: #e69c00;
+  --gold-700: #cc7a00;
+  --gold-800: #a35f05;
+  --gold-900: #854d0a;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+.text-maroon-50 { color: var(--maroon-50); }
+.text-maroon-100 { color: var(--maroon-100); }
+.text-maroon-200 { color: var(--maroon-200); }
+.text-maroon-300 { color: var(--maroon-300); }
+.text-maroon-400 { color: var(--maroon-400); }
+.text-maroon-500 { color: var(--maroon-500); }
+.text-maroon-600 { color: var(--maroon-600); }
+.text-maroon-700 { color: var(--maroon-700); }
+.text-maroon-800 { color: var(--maroon-800); }
+.text-maroon-900 { color: var(--maroon-900); }
+
+.text-gold-50 { color: var(--gold-50); }
+.text-gold-100 { color: var(--gold-100); }
+.text-gold-200 { color: var(--gold-200); }
+.text-gold-300 { color: var(--gold-300); }
+.text-gold-400 { color: var(--gold-400); }
+.text-gold-500 { color: var(--gold-500); }
+.text-gold-600 { color: var(--gold-600); }
+.text-gold-700 { color: var(--gold-700); }
+.text-gold-800 { color: var(--gold-800); }
+.text-gold-900 { color: var(--gold-900); }
+
+.bg-maroon-50 { background-color: var(--maroon-50); }
+.bg-maroon-100 { background-color: var(--maroon-100); }
+.bg-maroon-200 { background-color: var(--maroon-200); }
+.bg-maroon-300 { background-color: var(--maroon-300); }
+.bg-maroon-400 { background-color: var(--maroon-400); }
+.bg-maroon-500 { background-color: var(--maroon-500); }
+.bg-maroon-600 { background-color: var(--maroon-600); }
+.bg-maroon-700 { background-color: var(--maroon-700); }
+.bg-maroon-800 { background-color: var(--maroon-800); }
+.bg-maroon-900 { background-color: var(--maroon-900); }
+
+.bg-gold-50 { background-color: var(--gold-50); }
+.bg-gold-100 { background-color: var(--gold-100); }
+.bg-gold-200 { background-color: var(--gold-200); }
+.bg-gold-300 { background-color: var(--gold-300); }
+.bg-gold-400 { background-color: var(--gold-400); }
+.bg-gold-500 { background-color: var(--gold-500); }
+.bg-gold-600 { background-color: var(--gold-600); }
+.bg-gold-700 { background-color: var(--gold-700); }
+.bg-gold-800 { background-color: var(--gold-800); }
+.bg-gold-900 { background-color: var(--gold-900); }
+
+.border-maroon-50 { border-color: var(--maroon-50); }
+.border-maroon-100 { border-color: var(--maroon-100); }
+.border-maroon-200 { border-color: var(--maroon-200); }
+.border-maroon-300 { border-color: var(--maroon-300); }
+.border-maroon-400 { border-color: var(--maroon-400); }
+.border-maroon-500 { border-color: var(--maroon-500); }
+.border-maroon-600 { border-color: var(--maroon-600); }
+.border-maroon-700 { border-color: var(--maroon-700); }
+.border-maroon-800 { border-color: var(--maroon-800); }
+.border-maroon-900 { border-color: var(--maroon-900); }
+
+.border-gold-50 { border-color: var(--gold-50); }
+.border-gold-100 { border-color: var(--gold-100); }
+.border-gold-200 { border-color: var(--gold-200); }
+.border-gold-300 { border-color: var(--gold-300); }
+.border-gold-400 { border-color: var(--gold-400); }
+.border-gold-500 { border-color: var(--gold-500); }
+.border-gold-600 { border-color: var(--gold-600); }
+.border-gold-700 { border-color: var(--gold-700); }
+.border-gold-800 { border-color: var(--gold-800); }
+.border-gold-900 { border-color: var(--gold-900); }
