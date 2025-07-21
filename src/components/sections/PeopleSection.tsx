@@ -159,38 +159,6 @@ function FacultyCard({ member }: { member: typeof faculty[0] }) {
   );
 }
 
-function ScholarCard({ scholar }: { scholar: typeof researchScholars[0] }) {
-  return (
-    <Card className="overflow-hidden border-none shadow-lg dark:bg-slate-800">
-      <div className="flex flex-col md:flex-row">
-        <div className="md:w-1/3 bg-maroon-50 dark:bg-slate-700 flex items-center justify-center p-6">
-          <Avatar className="h-32 w-24 overflow-hidden rounded-md">
-            <AvatarImage
-              src={scholar.photoUrl}
-              alt={scholar.name}
-              className="object-cover h-full w-full"
-            />
-            <AvatarFallback className="text-2xl bg-maroon-200 text-maroon-700 dark:bg-slate-600 dark:text-gold-300">
-              {scholar.initials}
-            </AvatarFallback>
-          </Avatar>
-        </div>
-        <div className="md:w-2/3 p-6">
-          <CardHeader className="p-0 pb-3">
-            <CardTitle className="text-xl text-maroon-700 dark:text-gold-400">
-              {scholar.name}
-            </CardTitle>
-            <CardDescription>{scholar.department}</CardDescription>
-          </CardHeader>
-          <CardContent className="p-0 text-gray-700 dark:text-gray-300">
-            <p className="text-sm">{scholar.research}</p>
-          </CardContent>
-        </div>
-      </div>
-    </Card>
-  );
-}
-
 function InternCard({ intern }: { intern: typeof researchInterns[0] }) {
   return (
     <Card className="border-none shadow-md hover:shadow-lg transition-shadow duration-300 dark:bg-slate-800">
