@@ -1,4 +1,4 @@
-import { Card, CardContent } from '@/components/ui/card';
+//import { Card, CardContent } from '@/components/ui/card';
 import { Mail, MapPin, Phone } from 'lucide-react';
 
 export default function ContactSection() {
