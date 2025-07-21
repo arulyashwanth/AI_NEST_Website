@@ -16,7 +16,7 @@ const faculty = [
     name: 'Dr. Sundaresan S',
     role: 'Lab Incharge',
     department: 'School of Artificial Intelligence',
-    photoUrl: '/src/components/assets/members/Sundaresan.jpg',
+    photoUrl: '/src/components/assets/members/sundaresan.jpg',
     initials: 'SS',
     profileUrl: 'https://www.amrita.edu/faculty/sundaresan-s/',
   },
@@ -33,21 +33,15 @@ const faculty = [
 
 const researchScholars = [
   {
-    id: 1,
-    name: 'Arun Kumar',
-    department: 'Artificial Intelligence',
-    research: 'Deep Learning for Computer Vision',
-    photoUrl: '/src/components/assets/members/Arun.jpg',
-    initials: 'AK',
-  },
-  {
     id: 2,
-    name: 'Priya Mehta',
-    department: 'Artificial Intelligence',
-    research: 'Natural Language Processing',
-    photoUrl: '/src/components/assets/members/Priya.jpg',
-    initials: 'PM',
+    name: 'Anjana C',
+    role: 'Assistant Professor ',
+    department: 'School of Artificial Intelligence',
+    photoUrl: '/src/components/assets/members/anjana.jpg',
+    initials: 'AC',
+    profileUrl: 'https://www.amrita.edu/faculty/anjana-c/',
   },
+
 ];
 
 const researchInterns = [
@@ -100,7 +94,7 @@ export default function PeopleSection() {
             </h3>
             <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
               {researchScholars.map((scholar) => (
-                <ScholarCard key={scholar.id} scholar={scholar} />
+                <FacultyCard key={scholar.id} member={scholar} />
               ))}
             </div>
           </div>
@@ -167,28 +161,32 @@ function FacultyCard({ member }: { member: typeof faculty[0] }) {
 
 function ScholarCard({ scholar }: { scholar: typeof researchScholars[0] }) {
   return (
-    <Card className="border-none shadow-md hover:shadow-lg transition-shadow duration-300 dark:bg-slate-800">
-      <CardHeader className="text-center pt-6">
-        <Avatar className="h-32 w-24 mx-auto mb-3 overflow-hidden rounded-md">
-          <AvatarImage
-            src={scholar.photoUrl}
-            alt={scholar.name}
-            className="object-cover h-full w-full"
-          />
-          <AvatarFallback className="bg-maroon-100 text-maroon-700 dark:bg-slate-700 dark:text-gold-300">
-            {scholar.initials}
-          </AvatarFallback>
-        </Avatar>
-        <CardTitle className="text-lg text-maroon-700 dark:text-gold-400">{scholar.name}</CardTitle>
-        <CardDescription>
-          <Badge variant="secondary" className="mt-2">
-            {scholar.department}
-          </Badge>
-          <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
-            {scholar.research}
-          </p>
-        </CardDescription>
-      </CardHeader>
+    <Card className="overflow-hidden border-none shadow-lg dark:bg-slate-800">
+      <div className="flex flex-col md:flex-row">
+        <div className="md:w-1/3 bg-maroon-50 dark:bg-slate-700 flex items-center justify-center p-6">
+          <Avatar className="h-32 w-24 overflow-hidden rounded-md">
+            <AvatarImage
+              src={scholar.photoUrl}
+              alt={scholar.name}
+              className="object-cover h-full w-full"
+            />
+            <AvatarFallback className="text-2xl bg-maroon-200 text-maroon-700 dark:bg-slate-600 dark:text-gold-300">
+              {scholar.initials}
+            </AvatarFallback>
+          </Avatar>
+        </div>
+        <div className="md:w-2/3 p-6">
+          <CardHeader className="p-0 pb-3">
+            <CardTitle className="text-xl text-maroon-700 dark:text-gold-400">
+              {scholar.name}
+            </CardTitle>
+            <CardDescription>{scholar.department}</CardDescription>
+          </CardHeader>
+          <CardContent className="p-0 text-gray-700 dark:text-gray-300">
+            <p className="text-sm">{scholar.research}</p>
+          </CardContent>
+        </div>
+      </div>
     </Card>
   );
 }
