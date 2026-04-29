@@ -1,4 +1,3 @@
-import { useEffect, useRef } from 'react';
 import { Card } from '@/components/ui/card';
 
 const sponsors = [
@@ -20,26 +19,11 @@ const sponsors = [
 ];
 
 export default function SponsorsSection() {
-  const scrollRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const scrollContainer = scrollRef.current;
-    if (!scrollContainer) return;
-
-    const scroll = () => {
-      if (scrollContainer.scrollLeft >= scrollContainer.scrollWidth - scrollContainer.clientWidth) {
-        scrollContainer.scrollLeft = 0;
-      } else {
-        scrollContainer.scrollLeft += 1;
-      }
-    };
-
-    const intervalId = setInterval(scroll, 30);
-    return () => clearInterval(intervalId);
-  }, []);
+  // Duplicate sponsors array to ensure the screen is filled during scrolling
+  const displaySponsors = [...sponsors, ...sponsors, ...sponsors, ...sponsors];
 
   return (
-    <section id="sponsors" className="py-16 bg-gray-50 dark:bg-slate-950">
+    <section id="sponsors" className="py-16 bg-gray-50 dark:bg-slate-950 overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-12">
           <h2 className="text-3xl font-bold text-maroon-700 dark:text-gold-400 mb-4">
@@ -51,29 +35,53 @@ export default function SponsorsSection() {
           </p>
         </div>
 
-        <div 
-          ref={scrollRef}
-          className="flex overflow-x-hidden space-x-8 py-4"
-        >
-          {[...sponsors, ...sponsors].map((sponsor, index) => (
-            <Card
-              key={`${sponsor.name}-${index}`}
-              className="flex-none w-48 h-48 border-none shadow-md hover:shadow-lg transition-all duration-300 dark:bg-slate-800"
-            >
-              <a
-                href={sponsor.website}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block w-full h-full p-4 hover:scale-105 transition-transform duration-300"
+        {/* Marquee Container */}
+        <div className="flex w-full overflow-hidden group py-4">
+          {/* First block */}
+          <div className="flex shrink-0 animate-scroll group-hover:[animation-play-state:paused]">
+            {displaySponsors.map((sponsor, index) => (
+              <Card
+                key={`block1-${sponsor.name}-${index}`}
+                className="flex-none w-48 h-48 mx-4 border-none shadow-md hover:shadow-lg transition-all duration-300 dark:bg-slate-800"
               >
-                <img
-                  src={sponsor.logo}
-                  alt={`${sponsor.name} logo`}
-                  className="w-full h-full object-contain"
-                />
-              </a>
-            </Card>
-          ))}
+                <a
+                  href={sponsor.website}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full h-full p-4 hover:scale-105 transition-transform duration-300"
+                >
+                  <img
+                    src={sponsor.logo}
+                    alt={`${sponsor.name} logo`}
+                    className="w-full h-full object-contain"
+                  />
+                </a>
+              </Card>
+            ))}
+          </div>
+
+          {/* Second identical block for seamless looping */}
+          <div className="flex shrink-0 animate-scroll group-hover:[animation-play-state:paused]" aria-hidden="true">
+            {displaySponsors.map((sponsor, index) => (
+              <Card
+                key={`block2-${sponsor.name}-${index}`}
+                className="flex-none w-48 h-48 mx-4 border-none shadow-md hover:shadow-lg transition-all duration-300 dark:bg-slate-800"
+              >
+                <a
+                  href={sponsor.website}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full h-full p-4 hover:scale-105 transition-transform duration-300"
+                >
+                  <img
+                    src={sponsor.logo}
+                    alt={`${sponsor.name} logo`}
+                    className="w-full h-full object-contain"
+                  />
+                </a>
+              </Card>
+            ))}
+          </div>
         </div>
       </div>
     </section>

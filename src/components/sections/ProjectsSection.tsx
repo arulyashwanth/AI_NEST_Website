@@ -8,20 +8,56 @@ const topics = [
   'Computer Vision',
   'Optimization Techniques',
   'Deep Learning',
+  'Networks',
+  'Control Systems',
+  'Theoretical AI',
+  'Foundation Models',
+  'Large Language Models',
+  '6G and Beyond'
 ];
 
-const projects = [
+const companies = [
   {
     id: 'ror',
-    name: 'Development of a Multimodel LLM Stack for Processing and Understanding Enterprise Ecosystem data',
-    sponsor: 'ROR Technologies',
-    amountSponsored: '₨ 7,15,000',
+    name: 'ROR Technologies, Dubai',
+    projects: [
+      {
+        id: 'ror-1',
+        name: 'Development of a Multimodel LLM Stack for Processing and Understanding Enterprise Ecosystem data',
+      },
+      {
+        id: 'ror-2',
+        name: 'Task Specific LLM Model Tuning using Open Models and Open Weights',
+      },
+      {
+        id: 'ror-3',
+        name: 'AI Driven New Generation Webpage',
+      }
+    ]
   },
   {
     id: 'hikigai',
-    name: 'Foundational Reasoning Model for Healthcare using Knowledge Distillation',
-    sponsor: 'Hikigai INC',
-    amountSponsored: '₨ 5,00,000', 
+    name: 'Hikigai INC, USA',
+    projects: [
+      {
+        id: 'hikigai-1',
+        name: 'Foundational Reasoning Model for Healthcare using Knowledge Distillation',
+      }
+    ]
+  },
+  {
+    id: 'yitro',
+    name: 'Yitro Global, USA',
+    projects: [
+      {
+        id: 'yitro-2',
+        name: 'Customer relationship management platform featuring AI assistant capabilities, Excel/CSV bulk imports, and comprehensive analytics dashboard',
+      },
+      {
+        id: 'yitro-3',
+        name: 'An enterprise knowledge management system featuring specialized AI agents for document search, data extraction, and financial insights, built with local models',
+      }
+    ]
   }
 ];
 
@@ -32,7 +68,7 @@ export default function ProjectsSection() {
         {/* Header */}
         <div className="max-w-3xl mx-auto text-center mb-12">
           <h2 className="text-3xl font-bold text-maroon-700 dark:text-gold-400 mb-4">
-            Ongoing Research Projects
+            Ongoing Funded Research Projects
           </h2>
           <div className="h-1 w-20 bg-gold-500 mx-auto mb-6"></div>
           <p className="text-gray-700 dark:text-gray-300">
@@ -64,15 +100,19 @@ export default function ProjectsSection() {
         {/* Projects Tabs */}
         <div className="max-w-4xl mx-auto">
           <Tabs defaultValue="ror" className="w-full">
-            <TabsList className="grid w-full grid-cols-2 mb-8">
-              {projects.map(project => (
-                <TabsTrigger key={project.id} value={project.id}>{project.sponsor}</TabsTrigger>
+            <TabsList className="grid w-full sm:grid-cols-3 grid-cols-1 h-auto mb-8">
+              {companies.map(company => (
+                <TabsTrigger key={company.id} value={company.id} className="py-2">
+                  {company.name}
+                </TabsTrigger>
               ))}
             </TabsList>
 
-            {projects.map(project => (
-              <TabsContent key={project.id} value={project.id}>
-                <ProjectCard project={project} />
+            {companies.map(company => (
+              <TabsContent key={company.id} value={company.id} className="space-y-4">
+                {company.projects.map(project => (
+                  <ProjectCard key={project.id} project={project} sponsor={company.name} />
+                ))}
               </TabsContent>
             ))}
           </Tabs>
@@ -82,7 +122,7 @@ export default function ProjectsSection() {
   );
 }
 
-function ProjectCard({ project }: { project: typeof projects[0] }) {
+function ProjectCard({ project, sponsor }: { project: { name: string }, sponsor: string }) {
   return (
     <Card className="border-none shadow-lg dark:bg-slate-800">
       <CardHeader>
@@ -92,10 +132,7 @@ function ProjectCard({ project }: { project: typeof projects[0] }) {
       </CardHeader>
       <CardContent className="space-y-3">
         <p className="text-sm text-gray-600 dark:text-gray-400">
-          <strong>Company:</strong> {project.sponsor}
-        </p>
-        <p className="text-sm text-gray-600 dark:text-gray-400">
-          <strong>Amount Sponsored:</strong> {project.amountSponsored}
+          <strong>Company:</strong> {sponsor}
         </p>
       </CardContent>
     </Card>

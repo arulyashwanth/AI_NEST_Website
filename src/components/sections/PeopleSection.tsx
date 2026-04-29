@@ -33,7 +33,7 @@ const faculty = [
 
 const researchScholars = [
   {
-    id: 2,
+    id: 1,
     name: 'Anjana C',
     role: 'Assistant Professor ',
     department: 'School of Artificial Intelligence',
@@ -41,23 +41,36 @@ const researchScholars = [
     initials: 'AC',
     profileUrl: 'https://www.amrita.edu/faculty/anjana-c/',
   },
+  {
+    id: 2,
+    name: 'Abhinaya',
+    role: 'Full Time Research Scholar',
+    department: 'School of Artificial Intelligence',
+    photoUrl: '',
+    initials: 'A',
+    profileUrl: '',
+  },
 
 ];
 
 const researchInterns = [
-  { id: 1, name: 'Anirudh S Varrier', department: 'B.Tech AIE', year: '3rd Year', photoUrl: '/src/components/assets/members/Anirudh.jpg', initials: 'AV' },
-  { id: 3, name: 'Karishini S', department: 'B.Tech AIDS', year: '3rd Year', photoUrl: '/src/components/assets/members/Karishini.jpg', initials: 'KS' },
-  { id: 2, name: 'Kaniska S', department: 'B.Tech AIE', year: '3rd Year', photoUrl: '/src/components/assets/members/Kaniska.jpg', initials: 'KS' },
-  { id: 10, name: 'Neha Jacob', department: 'B.Tech AIE', year: '3rd Year', photoUrl: '/src/components/assets/members/Neha.jpg', initials: 'NJ' },
-  { id: 11, name: 'Rupali K', department: 'B.Tech AIDS', year: '3rd Year', photoUrl: '/src/components/assets/members/Rupali.jpg', initials: 'RK' },
-  { id: 4, name: 'Manasa V', department: 'B.Tech AIDS', year: '3rd Year', photoUrl: '/src/components/assets/members/Manasa.jpg', initials: 'MV' },
-  { id: 5, name: 'Vijay Santhosh P', department: 'B.Tech AIE', year: '3rd Year', photoUrl: '/src/components/assets/members/Vijay.jpg', initials: 'VS' },
-  { id: 6, name: 'Yashwanth Priya Thiruvarul', department: 'B.Tech AIE', year: '3rd Year', photoUrl: '/src/components/assets/members/Yashwanth.jpg', initials: 'YPT' },
-  { id: 13, name: 'S.A. Anuragine', department: 'B.Tech AIME', year: '2nd Year', photoUrl: '/src/components/assets/members/Anuragine.jpg', initials: 'SAA' },
-  { id: 7, name: 'Naresh L', department: 'B.Tech AIME', year: '2nd Year', photoUrl: '/src/components/assets/members/Naresh.jpg', initials: 'NL' },
-  { id: 8, name: 'Nivedhitha S', department: 'B.Tech AIME', year: '2nd Year', photoUrl: '/src/components/assets/members/Nivedhitha.jpg', initials: 'NS' },
-  { id: 12, name: 'Ragul U', department: 'B.Tech AIME', year: '2nd Year', photoUrl: '/src/components/assets/members/Ragul.jpg', initials: 'RU' },
-  { id: 9, name: 'Sangeetha S', department: 'B.Tech AIME', year: '2nd Year', photoUrl: '/src/components/assets/members/Sangeetha.jpg', initials: 'SS' },
+  { id: 1, name: 'Anirudh S Varrier', department: 'B.Tech AIE', year: '3rd Year', photoUrl: '/src/components/assets/members/Anirudh.jpg', initials: 'AV', rollnumber: 'CB.SC.U4AIE23113' },
+  { id: 3, name: 'Karishini S', department: 'B.Tech AID', year: '3rd Year', photoUrl: '/src/components/assets/members/Karishini.jpg', initials: 'KS', rollnumber: '' },
+  { id: 10, name: 'Neha Jacob', department: 'B.Tech AIE', year: '3rd Year', photoUrl: '/src/components/assets/members/Neha.jpg', initials: 'NJ', rollnumber: '' },
+  { id: 14, name: 'Roshini A', department: 'B.Tech AID', year: '3rd Year', photoUrl: '/src/components/assets/members/Roshini.jpeg', initials: 'RA', rollnumber: 'CB.AI.U4AID23069' },
+  { id: 11, name: 'Rupali K', department: 'B.Tech AID', year: '3rd Year', photoUrl: '/src/components/assets/members/Rupali.jpg', initials: 'RK', rollnumber: 'CB.AI.U4AID23033' },
+  { id: 17, name: 'Sala Tendool Srivatsav', department: 'B.Tech AID', year: '3rd Year', photoUrl: '/src/components/assets/members/Srivatsav.jpeg', initials: 'STS', rollnumber: 'CB.AI.U4AID23035' },
+  { id: 6, name: 'Yashwanth Priya Thiruvarul', department: 'B.Tech AIE', year: '3rd Year', photoUrl: '/src/components/assets/members/Yashwanth.jpg', initials: 'YPT', rollnumber: 'CB.SC.U4AIE23164' },
+  { id: 19, name: 'Harikrishna Sivanand IYER', department: 'B.Tech AIME', year: '2nd Year', photoUrl: '/src/components/assets/members/Harikrishna.jpeg', initials: 'HSI', rollnumber: 'CB.AI.U4AIM24114' },
+  { id: 16, name: 'Mahakisore M', department: 'B.Tech AIE', year: '2nd Year', photoUrl: '/src/components/assets/members/Mahakishore.jpeg', initials: 'MM', rollnumber: 'CB.SC.U4AIE24333' },
+  { id: 18, name: 'Meghana Kotharu', department: 'B.Tech AIE', year: '2nd Year', photoUrl: '/src/components/assets/members/Meghana.jpeg', initials: 'MK', rollnumber: 'CB.SC.U4AIE24232' },
+  { id: 7, name: 'Naresh L', department: 'B.Tech AIME', year: '2nd Year', photoUrl: '/src/components/assets/members/Naresh.jpg', initials: 'NL', rollnumber: 'CB.AI.U4AIM24028' },
+  { id: 8, name: 'Nivedhitha S', department: 'B.Tech AIME', year: '2nd Year', photoUrl: '/src/components/assets/members/Nivedhitha.jpeg', initials: 'NS', rollnumber: '' },
+  { id: 12, name: 'Ragul U', department: 'B.Tech AIME', year: '2nd Year', photoUrl: '/src/components/assets/members/Ragul.jpg', initials: 'RU', rollnumber: '' },
+  { id: 13, name: 'S.A. Anuragine', department: 'B.Tech AIME', year: '2nd Year', photoUrl: '/src/components/assets/members/Anuragine.jpeg', initials: 'SAA', rollnumber: '' },
+  { id: 9, name: 'Sangeetha S', department: 'B.Tech AIME', year: '2nd Year', photoUrl: '/src/components/assets/members/Sangeetha.jpg', initials: 'SS', rollnumber: '' },
+  { id: 15, name: 'Shreenidhi Gopalakrishnan', department: 'B.Tech AIME', year: '2nd Year', photoUrl: '/src/components/assets/members/Shreenidhi.jpeg', initials: 'SG', rollnumber: 'CB.AI.U4AIM24040' },
+  { id: 20, name: 'Varshitha Killampalli', department: 'B.Tech AIME', year: '2nd Year', photoUrl: '/src/components/assets/members/Varshitha.jpeg', initials: 'VK', rollnumber: 'CB.AI.U4AIM24122' }
 ];
 
 export default function PeopleSection() {
@@ -176,6 +189,11 @@ function InternCard({ intern }: { intern: typeof researchInterns[0] }) {
         <CardTitle className="text-lg text-maroon-700 dark:text-gold-400">{intern.name}</CardTitle>
         <CardDescription>
           <div className="space-y-1 mt-2">
+            {intern.rollnumber ? (
+              <Badge variant="outline" className="w-full justify-center">
+                {intern.rollnumber}
+              </Badge>
+            ) : null}
             <Badge variant="secondary" className="w-full justify-center">
               {intern.department}
             </Badge>
