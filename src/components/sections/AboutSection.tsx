@@ -8,24 +8,15 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 
-// Importing local images
-import lab1 from '/src/components/assets/lab/lab1.jpg';
-import lab2 from '/src/components/assets/lab/lab2.jpg';
-import lab3 from '/src/components/assets/lab/lab3.jpg';
-import lab4 from '/src/components/assets/lab/lab4.jpg';
-import lab5 from '/src/components/assets/lab/lab5.jpg';
-import lab6 from '/src/components/assets/lab/lab6.jpg';
-import lab7 from '/src/components/assets/lab/lab7.jpg';
-
 export default function AboutSection() {
   const galleryImages = [
-    { url: lab1, alt: "Lab Image 1" },
-    { url: lab2, alt: "Lab Image 2" },
-    { url: lab3, alt: "Lab Image 3" },
-    { url: lab4, alt: "Lab Image 4" },
-    { url: lab5, alt: "Lab Image 5" },
-    { url: lab6, alt: "Lab Image 6" },
-    { url: lab7, alt: "Lab Image 7" }
+    { url: '/assets/lab/lab1.jpg', alt: "Lab Image 1" },
+    { url: '/assets/lab/lab2.jpg', alt: "Lab Image 2" },
+    { url: '/assets/lab/lab3.jpg', alt: "Lab Image 3" },
+    { url: '/assets/lab/lab4.jpg', alt: "Lab Image 4" },
+    { url: '/assets/lab/lab5.jpg', alt: "Lab Image 5" },
+    { url: '/assets/lab/lab6.jpg', alt: "Lab Image 6" },
+    { url: '/assets/lab/lab7.jpg', alt: "Lab Image 7" }
   ];
 
   return (

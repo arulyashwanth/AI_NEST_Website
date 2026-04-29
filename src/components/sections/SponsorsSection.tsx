@@ -3,17 +3,17 @@ import { Card } from '@/components/ui/card';
 const sponsors = [
   {
     name: "ROR Technologies",
-    logo: "/src/components/assets/sponsors/ROR.jpg",
+    logo: "/assets/sponsors/ROR.jpg",
     website: "https://www.rortechnologies.com"
   },
   {
     name: "Hikigai Corp",
-    logo: "/src/components/assets/sponsors/Hikigai.jpg",
+    logo: "/assets/sponsors/Hikigai.jpg",
     website: "https://www.hikigai.ai"
   },
   {
     name: "Tech Innovators",
-    logo: "/src/components/assets/sponsors/Yitro.jpg",
+    logo: "/assets/sponsors/Yitro.jpg",
     website: "https://yitroglobal.com"
   },
 ];

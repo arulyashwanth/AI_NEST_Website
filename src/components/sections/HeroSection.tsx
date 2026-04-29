@@ -11,7 +11,7 @@ export default function HeroSection() {
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-b from-maroon-950/95 via-maroon-900/90 to-maroon-800/85 z-10" />
         <img
-          src="src\components\assets\lab\background.png"
+          src="/assets/lab/background.png"
           alt="AI Research Background"
           className="w-full h-full object-cover object-center opacity-40"
         />
